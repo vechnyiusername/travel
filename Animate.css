@@ -1,0 +1,45 @@
+/* Custom styles for the carousel */
+#travelCarousel .carousel-inner {
+    position: relative;
+    overflow: hidden;
+}
+
+#travelCarousel .carousel-item img {
+    object-fit: cover;
+    height: 500px; /* Adjust the height as needed */
+}
+
+/* Style for carousel captions */
+#travelCarousel .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+#travelCarousel .carousel-caption h5 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Additional styling for the control buttons */
+#travelCarousel .carousel-control-prev-icon,
+#travelCarousel .carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+/* Animate.css customization */
+.animate__animated {
+    animation-duration: 1.5s; /* Duration of animation */
+    animation-fill-mode: both; /* Ensures the animation stays */
+}
+
+.animate__fadeInUp {
+    animation-delay: 0.5s; /* Delay for better timing */
+}
+
+.animate__zoomIn {
+    animation-delay: 1s; /* Slight delay for zoom effect */
+}

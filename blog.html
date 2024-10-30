@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <title>Blog</title>
+<style>
+    nav a:hover {
+    background-color: #C1AA7F;
+    color: white;
+}   
+    nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 15px;
+    transition: background-color 0.3s ease;
+}
+footer {
+    background-color: #C1AA7F;
+    color: #F9F8F3;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px -4px 6px rgba(57, 55, 50, 0.8);
+}
+
+footer p {
+    font-size: 0.875rem;
+    margin: 0;
+}
+.btn-custom {
+        background-color: #C1AA7F; 
+        color: white; 
+        border: none; 
+    }
+.btn-custom:hover {
+        background-color: #8E774D; 
+    }
+</style>
+</head>
+<body>
+
+    <!-- Header -->
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/icon.png" alt="Logo" class="me-2" style="width: 40px; height: auto;">
+                The Travel Explorer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="navMenu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="about_us.html">About us</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="test valid.html">Sign up</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="authorize.html">Sign in</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Main Content -->
+    <main class="container py-5">
+        <div class="row g-4">
+            <!-- Post 1 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1285625/pexels-photo-1285625.jpeg" class="card-img-top" alt="Santorini Island">
+                    <div class="card-body">
+                        <span class="post-category">Europe • Greece • Islands • Volcanic Landscapes</span>
+                        <h3 class="card-title">Santorini: Visiting One of the Most Romantic Islands</h3>
+                        <p>Santorini is one of Greece's most romantic destinations, known for its stunning sunsets and whitewashed buildings perched on volcanic cliffs...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 2 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1374389/pexels-photo-1374389.jpeg" class="card-img-top" alt="Cinque Terre">
+                    <div class="card-body">
+                        <span class="post-category">Europe • Italy • Coastal Villages • Hiking Trails</span>
+                        <h3 class="card-title">Exploring the Hidden Coastal Villages of Cinque Terre</h3>
+                        <p>Cinque Terre, with its five enchanting villages, offers stunning coastal views, colorful houses, and hiking opportunities...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 3 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1592461/pexels-photo-1592461.jpeg" class="card-img-top" alt="Banff National Park">
+                    <div class="card-body">
+                        <span class="post-category">North America • Canada • Mountains • Wildlife</span>
+                        <h3 class="card-title">Discovering Nature in Banff National Park, Canada</h3>
+                        <p>Banff National Park in Canada offers incredible landscapes with crystal-clear lakes and majestic mountains...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 4 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/402028/pexels-photo-402028.jpeg" class="card-img-top" alt="Kyoto">
+                    <div class="card-body">
+                        <span class="post-category">Asia • Japan • Temples • Historical Sites</span>
+                        <h3 class="card-title">Immersing Yourself in Japan’s Cultural Heritage in Kyoto</h3>
+                        <p>Kyoto, Japan’s former imperial capital, is known for its historic temples, seren...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 5 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/625414/pexels-photo-625414.jpeg" class="card-img-top" alt="Cape Town">
+                    <div class="card-body">
+                        <span class="post-category">Africa • South Africa • Beaches • Mountains</span>
+                        <h3 class="card-title">Adventure at the Edge of Africa in Cape Town</h3>
+                        <p>Cape Town is a vibrant city surrounded by nature, from its beaches to the towering Table Mountain...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Post 6 -->
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="https://images.pexels.com/photos/1631665/pexels-photo-1631665.jpeg" class="card-img-top" alt="Petra">
+                    <div class="card-body">
+                        <span class="post-category">Middle East • Jordan • Ruins • Desert Landscape</span>
+                        <h3 class="card-title">Exploring the Ancient City of Petra</h3>
+                        <p>Petra, the ancient city carved into rose-colored cliffs in Jordan, is a fascinating site for history lovers...</p>
+                        <a href="#" class="btn btn-custom">Read More</a>
+                    </div>
+                </div>
+            </div>y
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made by SE-2320 Asanali Nurmagambet, Asanali Bayadilov, Zhandos Orymbetov</p>
+    </footer>
+    <script src="script_index.js"></script>
+
+</body>
+</html>

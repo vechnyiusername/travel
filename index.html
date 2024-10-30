@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Travel Explorer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="img/icon.png" alt="Logo" class="me-2" style="width: 40px; height: auto;">
+            The Travel Explorer
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul id="navMenu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="tours.html">Tours</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="blog.html">Blog</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="about_us.html">About us</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="contact.html">Contact</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="test valid.html">Sign up</a></li>
+                <li class="nav-item" tabindex="0"><a class="nav-link" href="authorize.html">Sign in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="hero-section">
+    <div>
+        <h1>Discover the real value of travel</h1>
+        <p>Flights | Hotels | Business Travel</p>
+    </div>
+</div>
+<div id="currentDateTime" class="text-center my-4">
+</div>
+    <main class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-md-3 mb-3">
+                <label for="destination" class="form-label">Where to?</label>
+                <input type="text" class="form-control" id="destination" placeholder="Enter destination" required>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="checkin" class="form-label">Check-in</label>
+                <input type="date" class="form-control" id="checkin" required>
+            </div>
+            <div class="col-md-2 mb-3">
+                <label for="checkout" class="form-label">Check-out</label>
+                <input type="date" class="form-control" id="checkout" required>
+            </div>
+            <div class="col-md-3 mb-3">
+                <label for="travelers" class="form-label">Travelers</label>
+                <select class="form-select" id="travelers">
+                    <option selected>2 travelers, 1 room</option>
+                    <option value="1">1 traveler, 1 room</option>
+                    <option value="3">3 travelers, 1 room</option>
+                    <option value="4">4 travelers, 2 rooms</option>
+                </select>
+            </div>
+            <div class="col-md-2 mb-3 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">Search</button>
+            </div>
+        </div>
+        <div id="greeting" class="text-center my-4"></div>
+
+        <div id="travelCarousel" class="carousel slide" data-bs-ride="carousel" class="container fade-in">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#travelCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://static.independent.co.uk/2023/03/20/16/iStock-590299316.jpg" class="d-block w-100" alt="Miami">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Amazing view to Miami beach</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.teztour.lv/static/photos/pages/1170/88/889/4151479775a27ec4886c71.jpg" class="d-block w-100" alt="Dubai">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Dubai during twilight</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/United%20Kingdom/London/london-aerial-thames-guide.jpg?imwidth=1280" class="d-block w-100" alt="London">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Amazing view to London</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="img/newyork.jpeg" class="d-block w-100" alt="New York">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Amazing view to New York</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://admin.expatica.com/jp/wp-content/uploads/sites/18/2023/11/tokyo-skyline-fuji.jpg" class="d-block w-100" alt="Japan">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Amazing view to Japan</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.britannica.com/24/153524-050-BA9D084B/Al-Dayr-Petra-Jordan.jpg?w=300" class="d-block w-100" alt="Petra">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Amazing view to Petra</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#travelCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#travelCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+       
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-12 mb-4">
+            <h3><strong>Popular Airlines in The United States</strong></h3>
+            <p>Book cheap flights on your favourite airlines</p>
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Turkish_Airlines_logo_2019_compact.svg/211px-Turkish_Airlines_logo_2019_compact.svg.png" alt="Turkish Airlines">
+                <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/e/e0/United_Airlines_Logo.svg/486px-United_Airlines_Logo.svg.png?20210501213330" alt="United Airlines">
+                <img src="https://banner2.cleanpng.com/20180415/upe/avfq2v6sd.webp" alt="Emirates">
+                <img src="https://s202.q4cdn.com/986123435/files/doc_downloads/logos/american-airlines/THUMB-aa_aa__ahz_rgb_grd_rev.png" alt="American Airlines"><br>
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Qatar_Airways_Logo.svg/270px-Qatar_Airways_Logo.svg.png" alt="Qatar Airways">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Pegasus_Airlines_logo.svg/250px-Pegasus_Airlines_logo.svg.png" alt="Pegasus Airlines">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/ca/Egypt_Air.svg/300px-Egypt_Air.svg.png" alt="Egyptair">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/48/Logo_of_Saudia.svg/200px-Logo_of_Saudia.svg.png" alt="Saudia">
+            </div>
+        </div>
+
+        <div class="col-md-12 mb-4">
+            <h3><strong>Our Travel Partners</strong></h3>
+            <p>Wego searches for the best deals on these sites in The United States</p>
+            <div class="logo-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/220px-Booking.com_logo.svg.png" alt="Booking.com">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/GoToGate_logo.svg/220px-GoToGate_logo.svg.png" alt="GoToGate">
+                <img src="https://s.yimg.com/ny/api/res/1.2/TRp_kCeaVZxA_heGzq0vmA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTEyMDA7aD0zNDI-/https://media.zenfs.com/en/globenewswire.com/253589cd85e0a520e5a26f5f2a32e038" alt="Wingie">
+                <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/8/89/Logo_qiwi_rgb.png/200px-Logo_qiwi_rgb.png" alt="Kiwi.com"><br>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Travix_logo.png" alt="Travix">
+                <img src="https://upload.wikimedia.org/wikipedia/ru/thumb/8/8a/FC_Real_Madrid_Logo.svg/186px-FC_Real_Madrid_Logo.svg.png" alt="Real Madrid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/1xBet-Logo.png/800px-1xBet-Logo.png" alt="1xbet">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Logo_NIKE.svg/200px-Logo_NIKE.svg.png" alt="nike">
+            </div>
+        </div>
+    </div>
+</div>
+<button onclick="changeBackgroundColor()" class="btn btn-secondary">Change Background Color to black then white</button>
+
+<button id="showDateTimeBtn" class="btn btn-info">Show Current Date & Time</button>
+
+
+
+    </main>
+
+    <footer class="text-center mt-5">
+        <p>Made by SE-2320 Asanali Nurmagambet, Asanali Bayadilov, Zhandos Orymbetov</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="script_index.js"></script>
+
+    
+</body>
+</html>

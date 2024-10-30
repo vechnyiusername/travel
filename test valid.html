@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Site</title>
+    <link rel="stylesheet" href="style_sign_up.css">
+    <style>
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Directory Site - User Form</h1>
+    <form id="directoryForm" onsubmit="return validateDirectoryForm()">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <span class="error" id="nameError"></span>
+        </div>
+        <br>
+        <div>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span class="error" id="emailError"></span>
+        </div>
+        <br>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+            <span class="error" id="passwordError"></span>
+        </div>
+        <br>
+        <div>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword">
+            <span class="error" id="confirmPasswordError"></span>
+        </div>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script src="validation.js"></script>
+</body>
+</html>

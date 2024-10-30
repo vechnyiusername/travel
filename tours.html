@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tours</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+        }
+        nav a:hover {
+            background-color: #C1AA7F;
+            color: white;
+        }   
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            transition: background-color 0.3s ease;
+        }
+        footer {
+            background-color: #C1AA7F;
+            color: #F9F8F3;
+            text-align: center;
+            padding: 20px 0;
+            box-shadow: 0px -4px 6px rgba(57, 55, 50, 0.8);
+        }
+        footer p {
+            font-size: 0.875rem;
+            margin: 0;
+        }
+        .tour-types {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+        .tour {
+            background-color: #f9f9f9;
+            border: 1px solid #e0e0e0;
+            margin: 10px;
+            width: 45%;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .tour img {
+            width: 100%;
+            height: auto;
+        }
+        .tour h3 {
+            color: #333;
+            margin: 15px 0;
+        }
+        .tour p {
+            color: #666;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #C1AA7F;
+            border: none;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #b39769;
+        }
+        .reviews {
+            background-color: #f0f0f0;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .review {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px;
+            display: inline-block;
+            width: 30%;        }
+        .review img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="img/icon.png" alt="Logo" class="me-2" style="width: 40px; height: auto;">
+                The Travel Explorer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul id="navMenu" class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="about_us.html">About us</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="test valid.html">Sign up</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="authorize.html">Sign in</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="custom_tour.html">Custom tour</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    
+    <main>
+        <section class="tour-types">
+            <div class="tour">
+                <img src="https://images.pexels.com/photos/19892814/pexels-photo-19892814/free-photo-of-a-woman-is-walking-through-a-large-cathedral.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Excursion Tours">
+                <h3>Excursion Tours</h3>
+                <p>We offer a collection of guided excursion tours. Our managers will find the best bus tours from your city to different countries and cities.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="tour">
+                <img src="https://images.pexels.com/photos/7012031/pexels-photo-7012031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Active Tours">
+                <h3>Active Tours</h3>
+                <p>We offer a collection of active tours. Our managers will find the best bus tours from your city to different countries and cities.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="tour">
+                <img src="https://images.pexels.com/photos/45923/pexels-photo-45923.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Bus Tours">
+                <h3>Bus Tours</h3>
+                <p>We offer a collection of bus tours. Our managers will find the best bus tours from your city to different countries and cities.</p>
+                <button>Learn More</button>
+            </div>
+            <div class="tour">
+                <img src="https://images.pexels.com/photos/167514/pexels-photo-167514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Event Tours">
+                <h3>Event Tours</h3>
+                <p>We offer a collection of event tours. Our managers will find the best bus tours from your city to different countries and cities.</p>
+                <button>Learn More</button>
+            </div>
+        </section>
+    
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <h2>Reviews</h2>
+            <div class="review">
+                <img src="https://images.pexels.com/photos/1040880/pexels-photo-1040880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Nikita Makarov">
+                <h3>Nikita Makarov</h3>
+                <p>Active Urban Tourism</p>
+                <p>Loved the company's service, especially the manager at the hotel. Great guy with a good sense of humor...</p>
+            </div>
+            <div class="review">
+                <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Zhanna Kuznetsova">
+                <h3>Zhanna Kuznetsova</h3>
+                <p>Canal Tour</p>
+                <p>No issues with the transfer. The hotel manager introduced us to excursions and then disappeared...</p>
+            </div>
+            <div class="review">
+                <img src="https://images.pexels.com/photos/1918246/pexels-photo-1918246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Evgenia Molchanova">
+                <h3>Evgenia Molchanova</h3>
+                <p>Skiing Tour</p>
+                <p>They greeted us, quickly transported us, and the guide gave us full information about ...</p>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>Made by SE-2320 Asanali Nurmagambet, Asanali Bayadilov, Zhandos Orymbetov</p>
+    </footer>
+    <script src="script_index.js"></script>
+</body>
+</html>
