@@ -43,6 +43,9 @@ function validateDirectoryForm() {
         isValid = false;
     }
 
+    // Notify the user
+    alert("Data saved successfully!");
+    
     // If all validations pass, allow form submission
     return isValid;
 }
@@ -59,4 +62,19 @@ function clearErrors() {
 function validateEmail(email) {
     let re = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     return re.test(String(email).toLowerCase());
+}
+
+function signUp(event) {
+    event.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username && password) {
+        // Store user data in localStorage
+        localStorage.setItem(username, JSON.stringify({ password }));
+        alert('Sign up successful! You can now log in.');
+        window.location.href = 'test valid.html'; // Redirect to sign-in page
+    } else {
+        alert('Please fill in both fields.');
+    }
 }

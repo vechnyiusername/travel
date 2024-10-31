@@ -12,9 +12,7 @@
     <header>
         <h1>Welcome to The Travel Explorer</h1>
         <nav class="navbar">
-            <div class="navbar-brand">
-                <img src="img/logo.png" alt="The Travel Explorer">
-            </div>
+            
         </nav>
     </header>
 
@@ -27,11 +25,11 @@
     <div id="loginModal" class="modal hidden">
         <div class="modal-content">
             <h2>Sign in to The Travel Explorer</h2>
-            <form id="loginForm">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" id="email" class="form-control" placeholder="email@example.com" required>
+            <form id="loginForm" onsubmit="return signIn(event)">
+                <label for="email" class="form-label">Email</label><br>
+                <input type="email" id="email" class="form-control" placeholder="email@example.com" required><br>
 
-                <label for="password" class="form-label">Password</label>
+                <label for="password" class="form-label">Password</label><br>
                 <input type="password" id="password" class="form-control" placeholder="At least 8 characters" required>
 
                 <div id="errorMessage" class="error-message hidden"></div>
@@ -41,10 +39,12 @@
         </div>
     </div>
 
-    <footer>
+    <footer class="footer">
         <p>© 2024 The Travel Explorer. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="authorize.js"></script>
 </body>
 </html>
+
+
