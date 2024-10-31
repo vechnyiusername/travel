@@ -44,5 +44,5 @@ Travel Explorer is designed to help users find, book, and share their travel jou
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/vechnyiusername/travel
-   cd travel-explorer
+   cd travel/
 
