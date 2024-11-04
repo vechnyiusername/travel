@@ -325,20 +325,61 @@ footer p {
     }
 }
 
-/* Apply animation to active carousel items */
+
 .carousel-item.active img {
     animation: slideIn 0.6s ease-out;
 }
-/* Initial style for carousel items */
+
 .carousel-item img {
     opacity: 0;
     transform: scale(0.95);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-/* Active carousel items will fade in and scale up */
+
 .carousel-item.active img {
     opacity: 1;
     transform: scale(1);
 }
 
+
+/* Light mode */
+body.light-mode {
+    background-color: white;
+    color: black;
+  }
+  
+  /* Dark mode */
+  body.dark-mode {
+    background-color: #343a40;
+    color: white;
+  }
+body.dark-mode .card {
+    background-color: #343a40;
+    color: white;
+}
+
+body.dark-mode .main-content {
+    background-color: #343a40;
+    color: white;
+}
+body.dark-mode .tour {
+    background-color: #343a40;
+    color: white;
+}
+body.dark-mode .review {
+    background-color: #000000;
+    color: white;
+}
+body.dark-mode .reviews {
+    background-color: #343a40;
+    color: white;
+}
+body.dark-mode .accordion-header {
+    background-color: #343a40;
+    color: white;
+}
+body.dark-mode .accordion-content {
+    background-color: #343a40;
+    color: white;
+}

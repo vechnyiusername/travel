@@ -145,40 +145,40 @@
                     <li class="nav-item" tabindex="0"><a class="nav-link" href="about_us.html">About us</a></li>
                     <li class="nav-item" tabindex="0"><a class="nav-link" href="contact.html">Contact</a></li>
                     <li class="nav-item" tabindex="0"><a class="nav-link" href="test valid.html">Sign up</a></li>
-                    <li class="nav-item" tabindex="0"><a class="nav-link" href="authorize.html">Sign in</a></li>
+                    <li class="nav-item" tabindex="0"><a class="nav-link" href="authorize.html">Log in</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
 <div class="container-boxes">
-    <div class="box" id="target1">Drop here</div>
-    <div class="box" id="target2">Drop here</div>
-    <div class="box" id="target3">Drop here</div>
-    <div class="box" id="target4">Drop here</div>
+    <div class="box" id="target1"></div>
+    <div class="box" id="target2"></div>
+    <div class="box" id="target3"></div>
+    <div class="box" id="target4"></div>
 </div>
 
 <main>
     <section class="tour-types">
-        <div class="tour" draggable="true" id="tour">
+        <div class="tour" draggable="true" id="tour1">
             <img src="https://avatars.mds.yandex.net/i?id=3f63a8cda9bd67aa242876b43e8da6d1_l-11846351-images-thumbs&n=13" alt="Istanbul">
             <h3>Istanbul</h3>
             <p>Capital city of Turkey.</p>
             <button>Learn More</button>
         </div>
-        <div class="tour" draggable="true" id="tour">
+        <div class="tour" draggable="true" id="tour2">
             <img src="https://avatars.mds.yandex.net/i?id=dfc3686265232b3a30df95b64b2b14f1_l-5225007-images-thumbs&n=13" alt="Warsaw">
             <h3>Warsaw</h3>
             <p>Capital city of Poland.</p>
             <button>Learn More</button>
         </div>
-        <div class="tour" draggable="true" id="tour">
+        <div class="tour" draggable="true" id="tour3">
             <img src="https://avatars.mds.yandex.net/i?id=5c484c8ed6ca06536d1e9bdf7e70c0f5_l-10354750-images-thumbs&n=13" alt="Roma">
             <h3>Roma</h3>
             <p>Capital city of Italy.</p>
             <button>Learn More</button>
         </div>
-        <div class="tour" draggable="true" id="tour">
+        <div class="tour" draggable="true" id="tour4">
             <img src="https://static.life.ru/posts/2019/03/1201839/1bb4cc2944aff97786a3975d5294ac3b.jpg" alt="Astana">
             <h3>Astana</h3>
             <p>Capital city of Kazakhstan.</p>
@@ -194,50 +194,59 @@
 </footer>
 
 <script>
-    const targets = [document.getElementById("target1"), document.getElementById("target2"), document.getElementById("target3"), document.getElementById("target4")];
-    const tours = document.querySelectorAll(".tour");
-    const clearAllButton = document.getElementById("clearAllButton");
+    const targets = [
+    document.getElementById("target1"),
+    document.getElementById("target2"),
+    document.getElementById("target3"),
+    document.getElementById("target4")
+];
+const tours = document.querySelectorAll(".tour");
+const clearAllButton = document.getElementById("clearAllButton");
 
-    tours.forEach(tour => {
-        tour.addEventListener("dragstart", event => {
-            event.dataTransfer.setData("text/plain", event.target.id);
-            setTimeout(() => {
-                tour.style.visibility = "hidden";
-            }, 0);
-        });
-
-        tour.addEventListener("dragend", () => {
-            tour.style.visibility = "visible";
-        });
+tours.forEach(tour => {
+    tour.addEventListener("dragstart", event => {
+        event.dataTransfer.setData("text/plain", event.target.id);
+        setTimeout(() => {
+            tour.classList.add("invisible");
+        }, 0);
     });
 
-    targets.forEach(target => {
-        target.addEventListener("dragover", event => {
-            event.preventDefault();
-        });
+    tour.addEventListener("dragend", () => {
+        tour.classList.remove("invisible");
+    });
+});
 
-        target.addEventListener("drop", event => {
-            event.preventDefault();
-            const tourId = event.dataTransfer.getData("text/plain");
-            const draggedTour = document.getElementById(tourId);
+targets.forEach(target => {
+    target.addEventListener("dragover", event => {
+        event.preventDefault();
+    });
+
+    target.addEventListener("drop", event => {
+        event.preventDefault();
+        const tourId = event.dataTransfer.getData("text/plain");
+        const draggedTour = document.getElementById(tourId);
+        
+        if (draggedTour) {
             target.appendChild(draggedTour);
-            draggedTour.style.display = "none";
+            draggedTour.classList.remove("invisible");
             updateClearButtonVisibility();
-        });
+        }
     });
+});
 
-    clearAllButton.addEventListener("click", () => {
-        tours.forEach(tour => {
-            document.querySelector(".tour-types").appendChild(tour);
-            tour.style.display = "block";
-        });
-        updateClearButtonVisibility();
+clearAllButton.addEventListener("click", () => {
+    tours.forEach(tour => {
+        document.querySelector(".tour-types").appendChild(tour);
+        tour.style.display = "block"; // Ensure tours are displayed
     });
+    updateClearButtonVisibility();
+});
 
-    function updateClearButtonVisibility() {
-        const isAnyTargetOccupied = Array.from(targets).some(target => target.children.length > 0);
-        clearAllButton.style.display = isAnyTargetOccupied ? "block" : "none";
-    }
+function updateClearButtonVisibility() {
+    const isAnyTargetOccupied = Array.from(targets).some(target => target.children.length > 0);
+    clearAllButton.style.display = isAnyTargetOccupied ? "block" : "none";
+}
+
 </script>
 
 </body>

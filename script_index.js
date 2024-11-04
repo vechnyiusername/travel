@@ -1,26 +1,19 @@
-// script.js
-function changeBackgroundColor() {
-  const colors = ['#000000', '#FFFFFF']; // Predefined colors
-  const randomColor = colors[Math.floor(Math.random() * colors.length)]; // Select a random color
-  
-  // Set the background color
-  document.body.style.backgroundColor = randomColor;
-
-  // Store the color in sessionStorage (only for the session)
-  sessionStorage.setItem('bgColor', randomColor);
-}
-
-// Apply the stored color when the page loads (if session is active)
-window.onload = function() {
-  const storedColor = sessionStorage.getItem('bgColor');
-  if (storedColor) {
-      document.body.style.backgroundColor = storedColor;
-  } else {
-      // Optional: Set the background to a default color on new sessions
-      document.body.style.backgroundColor = "#FFFFFF"; // Default color
+// Toggle theme function
+function toggleTheme() {
+    const currentTheme = localStorage.getItem('theme');
+    const newTheme = currentTheme === 'dark-mode' ? 'light-mode' : 'dark-mode';
+    localStorage.setItem('theme', newTheme);
+    
+    // Apply theme immediately on toggle page
+    document.body.className = newTheme;
   }
-}
-
+  
+  // Apply stored theme on every page load
+  document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light-mode';
+    document.body.classList.add(savedTheme);
+  });
+  
 
 
 document.addEventListener('DOMContentLoaded', () => {

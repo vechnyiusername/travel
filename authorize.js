@@ -1,47 +1,30 @@
-// autentication
-document.getElementById("loginForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent form submission
-
+function signIn(event) {
+    event.preventDefault();
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
 
-    fetch('users.json')
-        .then(response => response.json())
-        .then(users => {
-            const user = users.find(user => user.email === email && user.password === password);
-
-            if (user) {
-                // Redirect to index.html on successful login
-                // Notify the user
-                alert("Data saved successfully!");
-                window.location.href = "index.html";
-            } else {
-                document.getElementById("errorMessage").textContent = "Invalid email or password.";
-                document.getElementById("errorMessage").classList.remove("hidden");
-            }
-        })
-        .catch(error => {
-            console.error("Error fetching user data:", error);
-        });
-});
-
-function signIn(event) {
-    event.preventDefault();
-    const username = document.getElementById('loginUsername').value;
-    const password = document.getElementById('loginPassword').value;
-    const storedUser = localStorage.getItem(username);
-
-    if (storedUser) {
-        const { password: storedPassword } = JSON.parse(storedUser);
-        if (password === storedPassword) {
-            // Store session flag in localStorage
-            localStorage.setItem('session', username);
-            alert('Login successful!');
-            window.location.href = 'index.html'; // Redirect to home page
-        } else {
-            alert('Incorrect password. Please try again.');
-        }
+    if (localStorage.getItem(email) && JSON.parse(localStorage.getItem(email)).password === password) {
+        localStorage.setItem("sessionUser", email);
+        document.getElementById("loginStatus").textContent = `Logged in as ${email}`;
+        document.getElementById("logoutBtn").classList.remove("hidden");
+        alert("Login successful!");
     } else {
-        alert('User not found. Please sign up.');
+        document.getElementById("errorMessage").textContent = "Invalid email or password.";
+        document.getElementById("errorMessage").classList.remove("hidden");
     }
 }
+
+function logout() {
+    localStorage.removeItem("sessionUser");
+    document.getElementById("loginStatus").textContent = "You have logged out.";
+    document.getElementById("logoutBtn").classList.add("hidden");
+    alert("You have been logged out.");
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sessionUser = localStorage.getItem("sessionUser");
+    if (sessionUser) {
+        document.getElementById("loginStatus").textContent = `Logged in as ${sessionUser}`;
+        document.getElementById("logoutBtn").classList.remove("hidden");
+    }
+});

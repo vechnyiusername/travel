@@ -1,50 +1,42 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Travel Explorer</title>
+    <title>The Travel Explorer - Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header with Authorization Button -->
-    <header>
+    <header class="header">
         <h1>Welcome to The Travel Explorer</h1>
-        <nav class="navbar">
-            
-        </nav>
     </header>
 
-    <!-- Main Content -->
-    <div class="main-content">
-        <p>This is the The Travel Explorer authorization page. Please log in to continue.</p>
-    </div>
+    <main class="main-content">
+        <div class="auth-box">
+            <h2>Sign in to your account</h2>
+            <p id="loginStatus"></p>
+            <form id="loginForm" onsubmit="signIn(event)" class="form">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="email@example.com" required>
 
-    <!-- Login Modal -->
-    <div id="loginModal" class="modal hidden">
-        <div class="modal-content">
-            <h2>Sign in to The Travel Explorer</h2>
-            <form id="loginForm" onsubmit="return signIn(event)">
-                <label for="email" class="form-label">Email</label><br>
-                <input type="email" id="email" class="form-control" placeholder="email@example.com" required><br>
-
-                <label for="password" class="form-label">Password</label><br>
-                <input type="password" id="password" class="form-control" placeholder="At least 8 characters" required>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" id="password" class="form-input" placeholder="Password" required>
 
                 <div id="errorMessage" class="error-message hidden"></div>
 
-                <button type="submit" class="btn-primary">Continue</button>
+                <button type="submit" class="btn-primary">Login</button>
+                <button type="button" id="logoutBtn" class="btn-primary hidden" onclick="logout()">Logout</button>
             </form>
         </div>
-    </div>
+    </main>
 
     <footer class="footer">
         <p>© 2024 The Travel Explorer. All Rights Reserved.</p>
     </footer>
 
+
     <script src="authorize.js"></script>
+        
+    
 </body>
 </html>
-
-

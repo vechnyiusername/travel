@@ -66,15 +66,24 @@ function validateEmail(email) {
 
 function signUp(event) {
     event.preventDefault();
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const email = document.getElementById("email").value;
+    const password = document.getElementById("password").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
 
-    if (username && password) {
-        // Store user data in localStorage
-        localStorage.setItem(username, JSON.stringify({ password }));
-        alert('Sign up successful! You can now log in.');
-        window.location.href = 'test valid.html'; // Redirect to sign-in page
-    } else {
-        alert('Please fill in both fields.');
+    if (password !== confirmPassword) {
+        document.getElementById("errorMessage").textContent = "Passwords do not match.";
+        document.getElementById("errorMessage").classList.remove("hidden");
+        return;
     }
+
+    if (localStorage.getItem(email)) {
+        document.getElementById("errorMessage").textContent = "User already exists. Please log in.";
+        document.getElementById("errorMessage").classList.remove("hidden");
+        return;
+    }
+
+    const user = { email, password };
+    localStorage.setItem(email, JSON.stringify(user));
+    alert("Sign-up successful! You can now log in.");
+    window.location.href = "authorize.html"; 
 }
