@@ -21,7 +21,7 @@ function logout() {
     alert("You have been logged out.");
 }
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const sessionUser = localStorage.getItem("sessionUser");
     if (sessionUser) {
         document.getElementById("loginStatus").textContent = `Logged in as ${sessionUser}`;

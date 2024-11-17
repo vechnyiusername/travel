@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 content.style.maxHeight = null;
             }
-            });
         });
     });
+});
 function updateDateTime() {
     const now = new Date();
 
-    const options = {  
-        hour: 'numeric', 
-        minute: 'numeric', 
-        second: 'numeric', 
-        hour12: true 
+    const options = {
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+        hour12: true
     };
 
     const formattedDate = now.toLocaleString('en-US', options);
@@ -67,7 +67,7 @@ document.getElementById("showDateTimeBtn").addEventListener("click", function ()
 // Reset carousel animation on slide transition
 document.querySelector('#travelCarousel').addEventListener('slid.bs.carousel', function () {
     const activeItem = document.querySelector('.carousel-item.active img');
-    
+
     // Remove and re-add the active class to restart animation
     activeItem.classList.remove('active');
     setTimeout(() => activeItem.classList.add('active'), 10);

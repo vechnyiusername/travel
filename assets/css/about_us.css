@@ -11,19 +11,22 @@ body {
     margin: 0 auto;
     padding: 20px;
 }
+
 .offer-section {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
+
 .offer-section .card img {
-    width: 100%; 
+    width: 100%;
     max-width: 400px;
     height: auto;
     margin: 0 auto;
     display: block;
 }
+
 h2 {
     color: #C1AA7F;
     font-size: 24px;
@@ -86,43 +89,50 @@ h2 {
 .accordion-content p {
     margin: 15;
 }
+
 nav a:hover {
     background-color: #C1AA7F;
     color: white;
-}   
-    nav a {
+}
+
+nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
     font-size: 18px;
     padding: 8px 15px;
     transition: background-color 0.3s ease;
-    }
-    
-    section {
+}
+
+section {
     margin-bottom: 40px;
 }
-    section h2 {
+
+section h2 {
     color: #C1AA7F;
     font-size: 24px;
     margin-bottom: 20px;
 }
-    section p {
+
+section p {
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
-    .image-container img {
+
+.image-container img {
     width: 300px;
     height: auto;
     margin: 0 10px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 main {
     padding: 20px;
     text-align: center;
 }
+
 footer {
     background-color: #C1AA7F;
     color: #F9F8F3;

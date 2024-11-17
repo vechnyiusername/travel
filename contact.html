@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,8 @@
             color: #343a40;
         }
 
-        .form-input, .form-textarea {
+        .form-input,
+        .form-textarea {
             width: 100%;
             padding: 10px;
             margin-bottom: 15px;
@@ -89,91 +91,95 @@
         }
     </style>
 </head>
+
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img src="assets/img/icon.png" alt="Logo" class="me-2">
-            The Travel Explorer
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
-                <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
-                <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
-                <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" href="test valid.html">Sign up</a></li>
-                <li class="nav-item"><a class="nav-link" href="authorize.html">Log in</a></li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="assets/img/icon.png" alt="Logo" class="me-2">
+                The Travel Explorer
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinations.html">Destinations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about_us.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="test valid.html">Sign up</a></li>
+                    <li class="nav-item"><a class="nav-link" href="authorize.html">Log in</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<audio id="search-sound" src="assets/soundfx/applause.mp3" preload="auto"></audio>
+    <audio id="search-sound" src="assets/soundfx/applause.mp3" preload="auto"></audio>
 
-<main class="main-content container">
-    <section class="contact-form-section">
-        <h2>Get in Touch</h2>
-        <form action="#" method="post" class="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" class="form-input" name="name" placeholder="Your Name" required>
+    <main class="main-content container">
+        <section class="contact-form-section">
+            <h2>Get in Touch</h2>
+            <form action="#" method="post" class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="form-input" name="name" placeholder="Your Name" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" class="form-input" name="email" placeholder="Your Email" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" class="form-input" name="email" placeholder="Your Email" required>
 
-            <label for="phone">Phone (Optional):</label>
-            <input type="text" id="phone" class="form-input" name="phone" placeholder="Your Phone Number">
+                <label for="phone">Phone (Optional):</label>
+                <input type="text" id="phone" class="form-input" name="phone" placeholder="Your Phone Number">
 
-            <label for="message">Message:</label>
-            <textarea id="message" class="form-textarea" name="message" rows="5" placeholder="Your Message" required></textarea>
+                <label for="message">Message:</label>
+                <textarea id="message" class="form-textarea" name="message" rows="5" placeholder="Your Message"
+                    required></textarea>
 
-            <button type="submit" class="btn btn-primary">Send Message</button> <br>
-            <button type="button" id="resetBtn" class="btn btn-secondary">Reset</button>
-            <div id="popupForm" class="popup">
-                <div class="popup-content">
-                  <span class="close-btn">&times;</span>
-                  <h3>Subscribe to our Newsletter</h3>
-                  <form id="subscribeForm">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                <button type="submit" class="btn btn-primary">Send Message</button> <br>
+                <button type="button" id="resetBtn" class="btn btn-secondary">Reset</button>
+                <div id="popupForm" class="popup">
+                    <div class="popup-content">
+                        <span class="close-btn">&times;</span>
+                        <h3>Subscribe to our Newsletter</h3>
+                        <form id="subscribeForm">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                            <button type="submit" class="btn btn-primary">Subscribe</button>
 
-                  </form>
+                        </form>
+                    </div>
                 </div>
-              </div>
-              <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
-              
-        </form>
-        
-    </section>
+                <button id="subscribeBtn" class="btn btn-primary">Subscribe</button>
 
-    <section class="contact-info-section">
-        <h2>Contact Information</h2>
-        <p>Phone: +1 (123) 456-7890</p>
-        <p>Email: contact@youremail.com</p>
-        <p>Address: 123 Main Street, City, Country</p>
+            </form>
 
-        <div class="social-links">
-            <h3>Follow Us</h3>
-            <a href="#" class="social-link">Facebook</a> |
-            <a href="#" class="social-link">Twitter</a> |
-            <a href="#" class="social-link">Instagram</a>
-        </div>
-    </section>
-</main>
+        </section>
 
-<footer class="footer-bg">
-    <p>Made by SE-2320 Asanali Nurmagambet, Asanali Bayadilov, Zhandos Orymbetov</p>
-</footer>
+        <section class="contact-info-section">
+            <h2>Contact Information</h2>
+            <p>Phone: +1 (123) 456-7890</p>
+            <p>Email: contact@youremail.com</p>
+            <p>Address: 123 Main Street, City, Country</p>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/script_contact.js"></script>
-<script src="assets/script_index.js"></script>
+            <div class="social-links">
+                <h3>Follow Us</h3>
+                <a href="#" class="social-link">Facebook</a> |
+                <a href="#" class="social-link">Twitter</a> |
+                <a href="#" class="social-link">Instagram</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bg">
+        <p>Made by SE-2320 Asanali Nurmagambet, Asanali Bayadilov, Zhandos Orymbetov</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script_contact.js"></script>
+    <script src="assets/script_index.js"></script>
 </body>
+
 </html>

@@ -45,7 +45,7 @@ function validateDirectoryForm() {
 
     // Notify the user
     alert("Data saved successfully!");
-    
+
     // If all validations pass, allow form submission
     return isValid;
 }
@@ -85,5 +85,5 @@ function signUp(event) {
     const user = { email, password };
     localStorage.setItem(email, JSON.stringify(user));
     alert("Sign-up successful! You can now log in.");
-    window.location.href = "authorize.html"; 
+    window.location.href = "authorize.html";
 }
